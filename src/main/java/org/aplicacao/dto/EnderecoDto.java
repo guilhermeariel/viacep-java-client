@@ -2,8 +2,11 @@ package org.aplicacao.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+// Ignora automaticamente qualquer campo desconhecido presente no JSON recebido,
+// evitando erro de mapeamento se o JSON tiver mais propriedades do que a classe Java.
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class EnderecoDto {
+public class EnderecoDto { //Data Transfer Object
+  //São os campos esperados do JSON da API.
   private String cep;
   private String logradouro;
   private String complemento;
