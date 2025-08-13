@@ -23,7 +23,7 @@ public class ApiServico {
         //Desserializacao transfere os dados retornados em JSON para um OBJETO
         ObjectMapper mapper = new ObjectMapper();
         enderecoDto = mapper.readValue(response.body(), EnderecoDto.class);
-      } catch (Exception e) {
+      } catch (Exception  e) {
         System.out.println(e.getMessage());
       }
     return enderecoDto;
